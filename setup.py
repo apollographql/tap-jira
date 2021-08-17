@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 
 setup(name="tap-jira",
-      version="2.0.1",
+      version="2.0.2",
       description="Singer.io tap for extracting data from the Jira API",
       author="Stitch",
       url="http://singer.io",
@@ -24,8 +24,8 @@ setup(name="tap-jira",
           tap-jira=tap_jira:main
       """,
       packages=["tap_jira"],
-      package_data = {
+      package_data={
           "schemas": ["tap_jira/schemas/*.json"]
       },
       include_package_data=True,
-)
+      )

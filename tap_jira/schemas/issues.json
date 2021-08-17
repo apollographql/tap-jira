@@ -40,7 +40,7 @@
           "type": ["null", "number"]
         },
         "monthlyMilestone": {
-          "type": ["null", "number"]
+          "type": ["null", "string"]
         }
       }
     }

@@ -218,7 +218,7 @@ class Issues(Stream):
                 fields.pop('operations', None)
                 # Story points: customfield_10026, customfield_10016
                 # Monthly milestone: customfield_10092, customfield_10093
-                project_key = issue['project']['key']
+                project_key = fields['project']['key']
                 # Team Astro
                 if project_key == 'ATRO':
                     issue['fields'].update({
@@ -235,7 +235,7 @@ class Issues(Stream):
                 elif project_key == 'CNVL':
                     issue['fields'].update({
                         "monthlyMilestone": fields.get("customfield_10093"),
-                        "storyPointEstimate": fields.get("customfield_10026")
+                        "storyPointEstimate": fields.get("customfield_10016")
                     })
 
             # Grab last_updated before transform in write_page
