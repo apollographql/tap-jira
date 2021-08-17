@@ -89,6 +89,7 @@ class Stream():
     :var pk_fields: A list of primary key fields
     :var indirect_stream: If True, this indicates the stream cannot be synced
     directly, but instead has its data generated via a separate stream."""
+
     def __init__(self, tap_stream_id, pk_fields, indirect_stream=False, path=None):
         self.tap_stream_id = tap_stream_id
         self.pk_fields = pk_fields
@@ -204,7 +205,8 @@ class Issues(Stream):
             # sync comments and changelogs for each issue
             sync_sub_streams(page)
             for issue in page:
-                issue['fields'].pop('worklog', None)
+                fields = issue['fields']
+                fields.pop('worklog', None)
                 # The JSON schema for the search endpoint indicates an "operations"
                 # field can be present. This field is self-referential, making it
                 # difficult to deal with - we would have to flatten the operations
@@ -213,7 +215,28 @@ class Issues(Stream):
                 # with the UI within Jira - I believe the operations are parts of
                 # the "menu" bar for each issue. This is of questionable utility,
                 # so we decided to just strip the field out for now.
-                issue['fields'].pop('operations', None)
+                fields.pop('operations', None)
+                # Story points: customfield_10026, customfield_10016
+                # Monthly milestone: customfield_10092, customfield_10093
+                project_key = issue['project']['key']
+                # Team Astro
+                if project_key == 'ATRO':
+                    issue['fields'].update({
+                        "monthlyMilestone": fields.get("customfield_10092"),
+                        "storyPointEstimate": fields.get("customfield_10016")
+                    })
+                # Team Nebula
+                elif project_key == 'NEBULA':
+                    issue['fields'].update({
+                        "monthlyMilestone": fields.get("customfield_10092"),
+                        "storyPointEstimate": fields.get("customfield_10026")
+                    })
+                # Team Canaveral
+                elif project_key == 'CNVL':
+                    issue['fields'].update({
+                        "monthlyMilestone": fields.get("customfield_10093"),
+                        "storyPointEstimate": fields.get("customfield_10026")
+                    })
 
             # Grab last_updated before transform in write_page
             last_updated = utils.strptime_to_utc(page[-1]["fields"]["updated"])
