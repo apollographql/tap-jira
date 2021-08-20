@@ -30,6 +30,63 @@
           "type": ["null", "string"],
           "format": "date-time"
         },
+        "summary": {
+          "type": ["null", "string"]
+        },
+        "creator": {
+          "type": ["null", "object"],
+          "properties": {
+            "self": {
+              "type": ["null", "string"],
+              "format": "uri"
+            },
+            "accountId": {
+              "type": ["null", "string"]
+            },
+            "emailAddress": {
+              "type": ["null", "string"]
+            },
+            "displayName": {
+              "type": ["null", "string"]
+            },
+            "active": {
+              "type": ["null", "boolean"]
+            },
+            "timeZone": {
+              "type": ["null", "string"]
+            },
+            "accountType": {
+              "type": ["null", "string"]
+            }
+          }
+        },
+        "reporter": {
+          "type": ["null", "object"],
+          "properties": {
+            "self": {
+              "type": ["null", "string"],
+              "format": "uri"
+            },
+            "accountId": {
+              "type": ["null", "string"]
+            },
+            "emailAddress": {
+              "type": ["null", "string"]
+            },
+            "displayName": {
+              "type": ["null", "string"]
+            },
+            "active": {
+              "type": ["null", "boolean"]
+            },
+            "timeZone": {
+              "type": ["null", "string"]
+            },
+            "accountType": {
+              "type": ["null", "string"]
+            }
+          }
+        },
         "attachment": {
           "type": ["null", "array"],
           "items": {
@@ -41,6 +98,217 @@
         },
         "monthlyMilestone": {
           "type": ["null", "string"]
+        },
+        "statuscategorychangedate": {
+          "type": ["null", "string"],
+          "format": "date-time"
+        },
+        "issuetype": {
+          "type": ["null", "object"],
+          "properties": {
+            "self": {
+              "type": ["null", "string"]
+            },
+            "id": {
+              "type": ["null", "string"]
+            },
+            "description": {
+              "type": ["null", "string"]
+            },
+            "iconUrl": {
+              "type": ["null", "string"],
+              "format": "uri"
+            },
+            "name": {
+              "type": ["null", "string"]
+            },
+            "subtask": {
+              "type": ["null", "boolean"]
+            },
+            "avatarId": {
+              "type": ["null", "integer"]
+            },
+            "entityId": {
+              "type": ["null", "string"]
+            },
+            "hierarchyLevel": {
+              "type": ["null", "integer"]
+            }
+          }
+        },
+        "parent": {
+          "type": ["null", "object"],
+          "properties": {
+            "id": {
+              "type": ["null", "string"]
+            },
+            "key": {
+              "type": ["null", "string"]
+            },
+            "self": {
+              "type": ["null", "string"],
+              "format": "uri"
+            },
+            "priority": {
+              "type": ["null", "object"],
+              "properties": {
+                "self": {
+                  "type": ["null", "string"],
+                  "format": "uri"
+                },
+                "iconUrl": {
+                  "type": ["null", "string"],
+                  "format": "uri"
+                },
+                "name": {
+                  "type": ["null", "string"]
+                },
+                "id": {
+                  "type": ["null", "string"]
+                }
+              }
+            },
+            "issuetype": {
+              "type": ["null", "object"],
+              "properties": {
+                "self": {
+                  "type": ["null", "string"]
+                },
+                "id": {
+                  "type": ["null", "string"]
+                },
+                "description": {
+                  "type": ["null", "string"]
+                },
+                "iconUrl": {
+                  "type": ["null", "string"],
+                  "format": "uri"
+                },
+                "name": {
+                  "type": ["null", "string"]
+                },
+                "subtask": {
+                  "type": ["null", "boolean"]
+                },
+                "avatarId": {
+                  "type": ["null", "integer"]
+                },
+                "entityId": {
+                  "type": ["null", "string"]
+                },
+                "hierarchyLevel": {
+                  "type": ["null", "integer"]
+                }
+              }
+            }
+          }
+        },
+        "project": {
+          "type": ["null", "object"],
+          "properties": {
+            "self": {
+              "type": ["null", "string"],
+              "format": "uri"
+            },
+            "id": {
+              "type": ["null", "string"]
+            },
+            "key": {
+              "type": ["null", "string"]
+            },
+            "name": {
+              "type": ["null", "string"]
+            },
+            "projectTypeKey": {
+              "type": ["null", "string"]
+            },
+            "simplified": {
+              "type": ["null", "boolean"]
+            }
+          }
+        },
+        "watches": {
+          "type": ["null", "object"],
+          "properties": {
+            "self": {
+              "type": ["null", "string"],
+              "format": "uri"
+            },
+            "watchCount": {
+              "type": ["null", "integer"]
+            },
+            "isWatching": {
+              "type": ["null", "boolean"]
+            }
+          }
+        },
+        "priority": {
+          "type": ["null", "object"],
+          "properties": {
+            "self": {
+              "type": ["null", "string"],
+              "format": "uri"
+            },
+            "iconUrl": {
+              "type": ["null", "string"],
+              "format": "uri"
+            },
+            "name": {
+              "type": ["null", "string"]
+            },
+            "id": {
+              "type": ["null", "string"]
+            }
+          }
+        },
+        "labels": {
+          "type": ["null", "array"],
+          "items": {
+            "type": ["null", "string"]
+          }
+        },
+        "status": {
+          "type": ["null", "object"],
+          "properties": {
+            "self": {
+              "type": ["null", "string"],
+              "format": "uri"
+            },
+            "description": {
+              "type": ["null", "string"]
+            },
+            "iconUrl": {
+              "type": ["null", "string"],
+              "format": "uri"
+            },
+            "name": {
+              "type": ["null", "string"]
+            },
+            "id": {
+              "type": ["null", "string"]
+            },
+            "statusCategory": {
+              "type": ["null", "object"],
+              "properties": {
+                "self": {
+                  "type": ["null", "string"],
+                  "format": "uri"
+                },
+                "id": {
+                  "type": ["null", "integer"]
+                },
+                "key": {
+                  "type": ["null", "string"]
+                },
+                "colorName": {
+                  "type": ["null", "string"]
+                },
+                "name": {
+                  "type": ["null", "string"]
+                }
+              }
+            }
+          }
         }
       }
     }
