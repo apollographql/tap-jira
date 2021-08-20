@@ -27,7 +27,7 @@ This tap:
 
 1. Install
 
-    pip install tap-jira
+    pip install .
 
 2. Create the config file
 
