@@ -229,6 +229,7 @@ class Issues(Stream):
                 elif project_key == 'NEBULA':
                     issue['fields'].update({
                         "monthlyMilestone": fields.get("customfield_10092"),
+                        "nebulaEpicKey": fields.get("customfield_10014"),
                         "storyPointEstimate": fields.get("customfield_10026")
                     })
                 # Team Canaveral

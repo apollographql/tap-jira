@@ -99,6 +99,9 @@
         "monthlyMilestone": {
           "type": ["null", "string"]
         },
+        "nebulaEpicKey": {
+          "type": ["null", "string"]
+        },
         "statuscategorychangedate": {
           "type": ["null", "string"],
           "format": "date-time"
@@ -473,9 +476,6 @@
         }
       },
       "type": ["null", "object"]
-    },
-    "customfield_10014": {
-        "type": ["null", "string"]
     }
   }
 }
