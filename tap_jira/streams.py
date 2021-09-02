@@ -219,6 +219,11 @@ class Issues(Stream):
                 # Story points: customfield_10026, customfield_10016
                 # Monthly milestone: customfield_10092, customfield_10093
                 project_key = fields['project']['key']
+
+                issue['fields'].update({
+                    "sprint": fields.get("customfield_10021"),
+                })
+
                 # Team Astro
                 if project_key == 'ATRO':
                     issue['fields'].update({
