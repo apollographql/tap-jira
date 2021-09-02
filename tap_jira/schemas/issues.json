@@ -473,6 +473,9 @@
         }
       },
       "type": ["null", "object"]
+    },
+    "customfield_10014": {
+        "type": ["null", "string"]
     }
   }
 }
