@@ -221,7 +221,7 @@ class Issues(Stream):
                 project_key = fields['project']['key']
 
                 issue['fields'].update({
-                    "sprint": fields.get("customfield_10021"),
+                    "sprints": fields.get("customfield_10021"),
                 })
 
                 # Team Astro
