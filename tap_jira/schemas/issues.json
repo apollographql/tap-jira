@@ -87,6 +87,33 @@
             }
           }
         },
+        "assignee": {
+          "type": ["null", "object"],
+          "properties": {
+            "self": {
+              "type": ["null", "string"],
+              "format": "uri"
+            },
+            "accountId": {
+              "type": ["null", "string"]
+            },
+            "emailAddress": {
+              "type": ["null", "string"]
+            },
+            "displayName": {
+              "type": ["null", "string"]
+            },
+            "active": {
+              "type": ["null", "boolean"]
+            },
+            "timeZone": {
+              "type": ["null", "string"]
+            },
+            "accountType": {
+              "type": ["null", "string"]
+            }
+          }
+        },
         "attachment": {
           "type": ["null", "array"],
           "items": {
