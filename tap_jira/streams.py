@@ -240,7 +240,7 @@ class Issues(Stream):
                 # Team Canaveral
                 elif project_key == 'PHOENIX':
                     issue['fields'].update({
-                        "monthlyMilestone": fields.get("customfield_10135"),
+                        #"monthlyMilestone": fields.get("customfield_10135"),
                         "storyPointEstimate": fields.get("customfield_10016")
                     })
 
