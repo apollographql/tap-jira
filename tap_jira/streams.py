@@ -225,7 +225,7 @@ class Issues(Stream):
                 })
 
                 # Team Astro
-                if project_key == 'ATRO' or project_key == 'PHOENIX':
+                if project_key == 'ATRO':
                     issue['fields'].update({
                         "monthlyMilestone": fields.get("customfield_10092"),
                         "storyPointEstimate": fields.get("customfield_10016")
