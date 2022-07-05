@@ -225,13 +225,13 @@ class Issues(Stream):
                 })
 
                 # Team Astro
-                if project_key == 'ATRO':
-                    issue['fields'].update({
-                        "monthlyMilestone": fields.get("customfield_10092"),
-                        "storyPointEstimate": fields.get("customfield_10016")
-                    })
+                #if project_key == 'ATRO':
+                    #issue['fields'].update({
+                        #"monthlyMilestone": fields.get("customfield_10092"),
+                        #"storyPointEstimate": fields.get("customfield_10016")
+                    #})
                 # Team Nebula
-                elif project_key == 'NEBULA':
+                if project_key == 'NEBULA':
                     issue['fields'].update({
                         "monthlyMilestone": fields.get("customfield_10092"),
                         "nebulaEpicKey": fields.get("customfield_10014"),
