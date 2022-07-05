@@ -241,7 +241,7 @@ class Issues(Stream):
                 # Team PHOENIX
                 elif project_key == 'PHOENIX':
                     issue['fields'].update({
-                        #"monthlyMilestone": fields.get("customfield_10092"),
+                        "monthlyMilestone": fields.get("customfield_10092"),
                         "storyPointEstimate": fields.get("customfield_10016")
                     })
 
