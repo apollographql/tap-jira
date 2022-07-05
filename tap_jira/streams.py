@@ -240,8 +240,8 @@ class Issues(Stream):
                 # Team Canaveral
                 elif project_key == 'PHOENIX':
                     issue['fields'].update({
-                        "monthlyMilestone": fields.get("customfield_10093"),
-                        "storyPointEstimate": fields.get("customfield_10135")
+                        "monthlyMilestone": fields.get("customfield_10135"),
+                        "storyPointEstimate": fields.get("customfield_10016")
                     })
 
             # Grab last_updated before transform in write_page
