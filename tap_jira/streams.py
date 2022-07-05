@@ -238,6 +238,12 @@ class Issues(Stream):
                         "storyPointEstimate": fields.get("customfield_10026")
                     })
 
+                # Team PHOENIX
+                elif project_key == 'PHOENIX':
+                    issue['fields'].update({
+                        "monthlyMilestone": fields.get("customfield_10092"),
+                        "storyPointEstimate": fields.get("customfield_10016")
+                    })
 
 
             # Grab last_updated before transform in write_page
