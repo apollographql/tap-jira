@@ -237,15 +237,8 @@ class Issues(Stream):
                         "nebulaEpicKey": fields.get("customfield_10014"),
                         "storyPointEstimate": fields.get("customfield_10026")
                     })
-                # Team Canaveral
-                elif project_key == 'PHOENIX':
-                    issue['fields'].update({
-                        "monthlyMilestone": fields.get("customfield_10092"),
-                        "storyPointEstimate": fields.get("customfield_10016")
-                    })
-                    
-                else:
-                    continue
+
+
 
             # Grab last_updated before transform in write_page
             last_updated = utils.strptime_to_utc(page[-1]["fields"]["updated"])
