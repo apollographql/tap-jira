@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   slack: circleci/slack@3.4.2
+  secops: apollo/circleci-secops-orb@2.0.1
 
 jobs:
   build:
@@ -99,3 +100,12 @@ workflows:
     jobs:
       - build:
           context: circleci-user
+  security-scans:
+    jobs:
+      - secops/gitleaks:
+          context:
+            - platform-docker-ro
+            - github-orb
+            - secops-oidc
+          git-base-revision: <<#pipeline.git.base_revision>><<pipeline.git.base_revision>><</pipeline.git.base_revision >>
+          git-revision: << pipeline.git.revision >>
